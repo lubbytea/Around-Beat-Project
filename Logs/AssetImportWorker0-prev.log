@@ -15,12 +15,12 @@ C:/Users/Test/Documents/Unity GL/Around-Beat-Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57245
+53498
 Successfully changed project path to: C:/Users/Test/Documents/Unity GL/Around-Beat-Project
 C:/Users/Test/Documents/Unity GL/Around-Beat-Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 77.90 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.94 ms.
+Refreshing native plugins compatible for Editor in 73.43 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.96 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Test/Documents/Unity GL/Around-Beat-Project/Assets
@@ -36,22 +36,22 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56096
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002352 seconds.
+Registered in 0.002476 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 62.77 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 56.18 ms, found 10 plugins.
 Preloading 1 native plugins for Editor in 0.12 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.073 seconds
+- Completed reload, in  1.919 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011429 seconds.
+Registered in 0.011201 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 61.26 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 56.53 ms, found 10 plugins.
 Preloading 1 native plugins for Editor in 0.12 ms.
 [XR] OculusXRPlugin: registering subsystems
 [XR] Unable to register display lifecyle provider: [1]
@@ -64,330 +64,86 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
 
 Mono: successfully reloaded assembly
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-Assets queued for import after Refresh completed:
-	Assets/XR/Settings/Open XR Package Settings.asset
-RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
-RefreshProfiler: Total: 0.000ms
-Assertion failed on expression: 'm_Ptr'
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs:188)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:SetFeaturesFromEnabledFeatureSets (UnityEditor.BuildTargetGroup) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:368)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets (bool) (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:298)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:InitializeFeatureSets () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:214)
-UnityEditor.XR.OpenXR.Features.OpenXRFeatureSetManager:OnAssemblyReload () (at C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/OpenXRFeatureSetManager.cs:30)
-UnityEditor.AssemblyReloadEvents:OnAfterAssemblyReload ()
-
-[C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.openxr@1.2.0/Editor/FeatureSupport/FeatureHelpers.cs line 188]
-
-- Completed reload, in  1.569 seconds
+- Completed reload, in  1.384 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.46 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.74 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 Unloading 3332 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 150.1 MB.
 System memory in use after: 149.8 MB.
 
-Unloading 76 unused Assets to reduce memory usage. Loaded Objects now: 3800.
-Total: 3.072600 ms (FindLiveObjects: 0.303300 ms CreateObjectMapping: 0.119600 ms MarkObjects: 2.396500 ms  DeleteObjects: 0.252200 ms)
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 3801.
+Total: 3.403600 ms (FindLiveObjects: 0.318900 ms CreateObjectMapping: 0.154300 ms MarkObjects: 2.740800 ms  DeleteObjects: 0.188300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Game/Materials
-  artifactKey: Guid(70e68e3a309d3d348a2273fb9787574c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Materials using Guid(70e68e3a309d3d348a2273fb9787574c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c434c206f4f24248fdbd825d0a776040') in 0.005935 seconds
-  Import took 0.011637 seconds .
+  path: Assets/Game/New Folder
+  artifactKey: Guid(7f7bbb9c640651647a02df76d593324c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/New Folder using Guid(7f7bbb9c640651647a02df76d593324c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57fbe7cd65d54adc9eae01ca7c8ccecc') in 0.005538 seconds
+  Import took 0.014087 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.475834 seconds.
-  path: Assets/Game/Materials/New Material.mat
-  artifactKey: Guid(e6949f6ccadeb8147953f013cf9bc44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Materials/New Material.mat using Guid(e6949f6ccadeb8147953f013cf9bc44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aac338a9fef82379f48eaf37714b55b0') in 0.313148 seconds
-  Import took 0.320958 seconds .
+  Time since last request: 2.773706 seconds.
+  path: Assets/Game/Models
+  artifactKey: Guid(7f7bbb9c640651647a02df76d593324c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Models using Guid(7f7bbb9c640651647a02df76d593324c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aea64d195dfb6fb01a5fedb69765ff85') in 0.002598 seconds
+  Import took 0.010752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.472472 seconds.
+  path: Assets/Game/Models/LeftHand.fbx
+  artifactKey: Guid(0f1a89fea22fbca46b1d007b14ec2cc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Models/LeftHand.fbx using Guid(0f1a89fea22fbca46b1d007b14ec2cc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44352c6b05b768d37291812ce78fc07e') in 0.426125 seconds
+  Import took 0.434342 seconds .
 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011025 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 10 plugins.
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 13.54 ms, found 10 plugins.
 Preloading 1 native plugins for Editor in 0.11 ms.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\Test\Documents\Unity GL\Around Beat Project\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\Test\Documents\Unity GL\Around Beat Project\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+Unloading 38 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 96.5 MB.
+System memory in use after: 96.4 MB.
 
-(Filename: C:/Users/Test/Documents/Unity GL/Around Beat Project/Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
+Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 3911.
+Total: 5.654900 ms (FindLiveObjects: 0.381900 ms CreateObjectMapping: 0.164900 ms MarkObjects: 4.914500 ms  DeleteObjects: 0.192400 ms)
 
-Mono: successfully reloaded assembly
-- Completed reload, in  1.324 seconds
-Platform modules already initialized, skipping
-Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
-Unloading 3215 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.3 MB.
-System memory in use after: 143.2 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3881.
-Total: 4.158900 ms (FindLiveObjects: 0.651100 ms CreateObjectMapping: 0.302400 ms MarkObjects: 2.963400 ms  DeleteObjects: 0.240300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Import Request.
-  Time since last request: 236.307035 seconds.
-  path: Assets/Game/Materials/New Material.mat
-  artifactKey: Guid(e6949f6ccadeb8147953f013cf9bc44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Materials/New Material.mat using Guid(e6949f6ccadeb8147953f013cf9bc44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a8922fbd8ccc5c47c6c32dd625ed8a7') in 0.790027 seconds
-  Import took 0.801876 seconds .
+  Time since last request: 3349.726846 seconds.
+  path: Assets/Game/Models/LeftHand.fbx
+  artifactKey: Guid(0f1a89fea22fbca46b1d007b14ec2cc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Models/LeftHand.fbx using Guid(0f1a89fea22fbca46b1d007b14ec2cc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45059ba90aaae79fec9494a0d100d607') in 0.125515 seconds
+  Import took 0.138829 seconds .
 
 ========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 12.34 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Unloading 38 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.1 MB.
-System memory in use after: 83.0 MB.
-
-Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 3944.
-Total: 4.818700 ms (FindLiveObjects: 0.959200 ms CreateObjectMapping: 0.222900 ms MarkObjects: 3.432200 ms  DeleteObjects: 0.178300 ms)
+Received Import Request.
+  Time since last request: 276.103253 seconds.
+  path: Assets/Game/Animations
+  artifactKey: Guid(57d16642937659a458fc2a7efd273d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Animations using Guid(57d16642937659a458fc2a7efd273d61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b33293558c16f2be5f26dc73c2a7228') in 0.003066 seconds
+  Import took 0.013343 seconds .
 
 ========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 10.25 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
-Unloading 38 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.2 MB.
-System memory in use after: 83.0 MB.
+Received Import Request.
+  Time since last request: 42.328388 seconds.
+  path: Assets/Game/Animations/New Animator Controller.controller
+  artifactKey: Guid(611e6dd96046a51488af8fb6c1a32398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Animations/New Animator Controller.controller using Guid(611e6dd96046a51488af8fb6c1a32398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292a0088849cdc893bf5396d89bbbaba') in 0.027043 seconds
+  Import took 0.042157 seconds .
 
-Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 3944.
-Total: 5.472800 ms (FindLiveObjects: 0.347200 ms CreateObjectMapping: 0.132200 ms MarkObjects: 4.789000 ms  DeleteObjects: 0.203000 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 8.966369 seconds.
+  path: Assets/Game/Animations/HandAnimator.controller
+  artifactKey: Guid(611e6dd96046a51488af8fb6c1a32398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Animations/HandAnimator.controller using Guid(611e6dd96046a51488af8fb6c1a32398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4343b049b94c1a8297cd1d469499cbd5') in 0.003188 seconds
+  Import took 0.012528 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
