@@ -15,6 +15,8 @@ public class Hand : MonoBehaviour
     private string animatorGripParam = "Grip";
     private string animatorTriggerParam = "Trigger";
 
+  
+
     void Start()
     {
         animator = GetComponent<Animator>();
