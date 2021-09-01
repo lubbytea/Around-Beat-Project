@@ -15,17 +15,49 @@ public class Hand : MonoBehaviour
     private string animatorGripParam = "Grip";
     private string animatorTriggerParam = "Trigger";
 
-  
+
+    // Physics Movement
+    [SerializeField] public GameObject followObject;
+    [SerializeField] public float followSpeed = 30f;
+    [SerializeField] public float rotateSpeed = 100f;
+    public Transform followTarget;
+    public Rigidbody body;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        // Physics Movement
+        followTarget = followObject.transform;
+        body = GetComponent<Rigidbody>();
+        body.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        body.interpolation = RigidbodyInterpolation.Interpolate;
+        body.mass = 20f;
+
+        //Teleport hands
+        body.position = followTarget.position;
+        body.rotation = followTarget.rotation;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         AnimateHand();
+        PhysicsMove();
+    }
+
+    public void PhysicsMove()
+    {
+        //Position
+
+        var distance = Vector3.Distance(followTarget.position, transform.position);
+        body.velocity = (followTarget.position - transform.position).normalized * (followSpeed * distance);
+
+        //Rotation
+        Quaternion q = followTarget.rotation * Quaternion.Inverse(body.rotation);
+        q.ToAngleAxis(out float angle, out Vector3 axis);
+        body.angularVelocity = axis * (angle * Mathf.Deg2Rad * rotateSpeed);
     }
 
     internal void SetGrip(float v)

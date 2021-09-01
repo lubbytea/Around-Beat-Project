@@ -2727,6 +2727,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  followObject: {fileID: 0}
+  followSpeed: 30
+  rotateSpeed: 100
+  followTarget: {fileID: 0}
+  body: {fileID: 0}
 --- !u!54 &6964110407326554711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2756,6 +2761,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  followObject: {fileID: 0}
+  followSpeed: 30
+  rotateSpeed: 100
+  followTarget: {fileID: 0}
+  body: {fileID: 0}
 --- !u!1001 &6964110407083065156
 PrefabInstance:
   m_ObjectHideFlags: 0
