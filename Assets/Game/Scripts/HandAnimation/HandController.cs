@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-
+using UnityEngine.InputSystem;
 [RequireComponent(typeof(ActionBasedController))]
 public class HandController : MonoBehaviour
 {
@@ -19,4 +19,5 @@ public class HandController : MonoBehaviour
         hand.SetGrip(controller.selectAction.action.ReadValue<float>());
         hand.SetTrigger(controller.activateAction.action.ReadValue<float>());
     }
+
 }
