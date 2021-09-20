@@ -28,6 +28,7 @@ public class ChartCreator : MonoBehaviour
     public void ChangeTimeSet(float time)
     {
         timeSet = time;
+       
     }
     public void Chagne(float bmp)
     {
