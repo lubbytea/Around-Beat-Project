@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/DevTools/CharMaker/CharEditor.unity
+    guid: 074cdf6aa09b7724ebf392f6f029285f
+  - enabled: 1
     path: Assets/Game/Scenes/Menu2.unity
     guid: 88792fa0949e3c343b975a4c37c2469e
   - enabled: 1
