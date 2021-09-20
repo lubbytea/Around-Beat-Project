@@ -16,6 +16,7 @@ public class ChartCreator : MonoBehaviour
     public Transform endMarker;
     public Transform lime;
     public Text text;
+    bool onPlay;
     void Start()
     {
          inputs = InputSystem.GetDevice<Keyboard>();
@@ -27,26 +28,27 @@ public class ChartCreator : MonoBehaviour
         text.text = bpm + "";
 
     }
-    // Update is called once per frame
+   
     void Update()
     {
-        float distCovered = (Time.time - startTime) * bpm;
-
-        // Fraction of journey completed equals current distance divided by total distance.
-        float fractionOfJourney = distCovered / journeyLength;
-
-        // Set our position as a fraction of the distance between the markers.
-
-        lime.localPosition = new Vector3(lime.localPosition.x, Mathf.PingPong(distCovered, journeyLength), lime.localPosition.z);
-        Debug.Log(audio.time);
         if (inputs.spaceKey.wasReleasedThisFrame)
         {
             pause = !pause;
             if (pause)
+            {
                 audio.Pause();
-           
+                onPlay = false;
+            }
           else
+            {
                 audio.Play();
+                onPlay = true;
+            }
+        }
+        if (onPlay)
+        {
+        float distCovered = (Time.time - startTime) * bpm;
+        lime.localPosition = new Vector3(lime.localPosition.x, Mathf.PingPong(distCovered, journeyLength), lime.localPosition.z);
         }
     }
 }
