@@ -16,11 +16,19 @@ public class ChartCreator : MonoBehaviour
     public Transform endMarker;
     public Transform lime;
     public Text text;
+    public float timeSet;
     bool onPlay;
+    public bool topDown;
     void Start()
     {
          inputs = InputSystem.GetDevice<Keyboard>();
         journeyLength = Vector2.Distance(startMarker.position, endMarker.position);
+        Time.timeScale = 0;
+    }
+    public void ChangeTimeSet(float time)
+    {
+        timeSet = time;
+       
     }
     public void Chagne(float bmp)
     {
@@ -28,19 +36,29 @@ public class ChartCreator : MonoBehaviour
         text.text = bpm + "";
 
     }
-   
+    public void PauseOnTime()
+    {
+        Time.timeScale = 0;
+        audio.Pause();
+        onPlay = false;
+    }
     void Update()
     {
+        if (audio.time >= timeSet+2f)
+        {
+            PauseOnTime();
+        }
         if (inputs.spaceKey.wasReleasedThisFrame)
         {
             pause = !pause;
             if (pause)
             {
-                audio.Pause();
-                onPlay = false;
+            PauseOnTime();
             }
           else
             {
+                Time.timeScale = 1;
+                audio.time = timeSet; 
                 audio.Play();
                 onPlay = true;
             }
@@ -48,7 +66,8 @@ public class ChartCreator : MonoBehaviour
         if (onPlay)
         {
         float distCovered = (Time.time - startTime) * bpm;
-        lime.localPosition = new Vector3(lime.localPosition.x, Mathf.PingPong(distCovered, journeyLength), lime.localPosition.z);
+            Debug.Log(distCovered);
+            lime.localPosition = new Vector3(lime.localPosition.x, Mathf.PingPong(distCovered, journeyLength), lime.localPosition.z);
         }
     }
 }
