@@ -7762,6 +7762,8 @@ MonoBehaviour:
   endMarker: {fileID: 1227883647}
   lime: {fileID: 355633209}
   text: {fileID: 1390751092}
+  timeSet: 2
+  topDown: 0
 --- !u!1 &729408378
 GameObject:
   m_ObjectHideFlags: 0
