@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spheres : MonoBehaviour
 {
+    public GameObject hitFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +17,24 @@ public class Spheres : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.name);
-        if (other.GetComponent<Hand>() != null)
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.GetComponent<Hand>() != null)
         {
-            Destroy(this.gameObject);
+            //    Destroy(this.gameObject);
+            Instantiate(hitFX, this.transform);
         }
     }
+
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    Debug.Log(other.name);
+    //    if (other.GetComponent<Hand>() != null)
+    //    {
+    //        //    Destroy(this.gameObject);
+    //              }
+    //}
 
     void OnTriggerStay(Collider other)
     {

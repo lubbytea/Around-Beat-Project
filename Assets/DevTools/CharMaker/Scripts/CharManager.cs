@@ -47,7 +47,7 @@ public class CharManager : MonoBehaviour
         for (int y = 0; y < 8; y++)
         {
             x += 45;
-        for (int i = -45; i < 45; i+=5)
+        for (int i = -45; i < 45; i+=13)
         {
            // x += 2;
             values.Add(new Vector2(i,x));
