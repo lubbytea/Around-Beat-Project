@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CharManager : MonoBehaviour
@@ -13,13 +14,14 @@ public class CharManager : MonoBehaviour
     public bool runTest;
     public float addedValue;
     public int anchor;
+    public SongChart songChart;
     public void Start()
     {
         if (runTest)
         {
         RunTest();
-
         }
+        values = songChart.beat[0];
         CraftCharts();
     }
     public void CraftCharts()
@@ -42,16 +44,18 @@ public class CharManager : MonoBehaviour
     }
      void RunTest()
     {
-      
+        songChart.beat = new List<List<Vector2>>();
+        songChart.beat.Add( new List<Vector2>());
         int x = -180;
         for (int y = 0; y < 8; y++)
         {
             x += 45;
         for (int i = -45; i < 45; i+=13)
         {
-           // x += 2;
-            values.Add(new Vector2(i,x));
+                // x += 2;
+                songChart.beat[0].Add(new Vector2(i,x));
         }
         }
+       
     }
 }
