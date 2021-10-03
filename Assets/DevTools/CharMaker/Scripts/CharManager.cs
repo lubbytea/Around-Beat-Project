@@ -17,7 +17,8 @@ public class CharManager : MonoBehaviour
     public ChartSerializable serializable;
     public List<List<Vector2>> beat;
     public TextAsset text;
-    public List<Vector2> tempList;
+   
+    int i;
     public void Start()
     {
         if (runTest)
@@ -25,18 +26,31 @@ public class CharManager : MonoBehaviour
         RunTest();
         }
         ReadChartString();
-        values = tempList;
+
+        StartCoroutine(CastMultiple());
+    }
+    IEnumerator CastMultiple()
+    {
+        yield return new WaitForSeconds(2f);
+        values = beat[i];
         CraftCharts();
+        i++;
+        StartCoroutine(CastMultiple());
     }
     public void ReadChartString()
     {
-        serializable = JsonUtility.FromJson<ChartSerializable>(text.text);
-        Debug.Log(serializable.beat);
-        char[] b = serializable.beat[0].ToCharArray();
+        beat = new List<List<Vector2>>();
+         serializable = JsonUtility.FromJson<ChartSerializable>(text.text);
+     
+        foreach (var beater in serializable.beat)
+        {
+
+        char[] b = beater.ToCharArray();
         float x=0f;
         float y=0f;
         string current="";
         bool punto = false;
+         List<Vector2> tempList = new List<Vector2>();
         foreach (var item in b)
         {
             if (item == '.')
@@ -70,6 +84,8 @@ public class CharManager : MonoBehaviour
             }
             current += item;
         }
+            beat.Add(tempList);
+        }
 
     }
     public void CraftCharts()
@@ -94,29 +110,37 @@ public class CharManager : MonoBehaviour
     {
     List<string> prueba = new List<string>();
     beat = new List<List<Vector2>>();
-        beat.Add( new List<Vector2>());
+
+
         int x = -180;
         for (int y = 0; y < 8; y++)
         {
+          List<Vector2>  currentBeat = new List<Vector2>();
             x += 45;
         for (int i = -45; i < 45; i+=13)
         {
                 // x += 2;
-                beat[0].Add(new Vector2(i,x));
+                currentBeat.Add(new Vector2(i,x));
         }
+            beat.Add(currentBeat);
         }
+
+
 
         ChartSerializable myObject = new ChartSerializable();
         myObject.music = songChart.music;
         myObject.songName = songChart.songName;
-        string pepita = "";
-        foreach (var item in beat[0])
+        string toJson = "";
+        foreach (var beater in beat)
         {
-            pepita += item;
+        foreach (var item in beater)
+        {
+            toJson += item;
         }
-            string pepe = pepita;
-            prueba.Add(pepe);
-        prueba.Add(pepe);
+            prueba.Add(toJson);
+            toJson = "";
+        }
+      
 
         myObject.beat = prueba;
        
