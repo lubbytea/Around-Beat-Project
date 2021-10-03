@@ -27,6 +27,7 @@ public class ChartCreator : MonoBehaviour
     public SongChart songChart;
     public GameObject point;
     public Transform canvasChart;
+ 
     void Start()
     {
         songText.text = songChart.songName;

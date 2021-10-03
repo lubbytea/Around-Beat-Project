@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
 public class CharManager : MonoBehaviour
 {
     public Transform spawner;
@@ -15,14 +14,63 @@ public class CharManager : MonoBehaviour
     public float addedValue;
     public int anchor;
     public SongChart songChart;
+    public ChartSerializable serializable;
+    public List<List<Vector2>> beat;
+    public TextAsset text;
+    public List<Vector2> tempList;
     public void Start()
     {
         if (runTest)
         {
         RunTest();
         }
-        values = songChart.beat[0];
+        ReadChartString();
+        values = tempList;
         CraftCharts();
+    }
+    public void ReadChartString()
+    {
+        serializable = JsonUtility.FromJson<ChartSerializable>(text.text);
+        Debug.Log(serializable.beat);
+        char[] b = serializable.beat[0].ToCharArray();
+        float x=0f;
+        float y=0f;
+        string current="";
+        bool punto = false;
+        foreach (var item in b)
+        {
+            if (item == '.')
+            {
+                punto = true;
+                continue;
+            }
+            if (punto == true)
+            {
+                punto = false;
+                continue;
+            }
+            if (item == ')')
+            {
+                y = float.Parse(current);
+                tempList.Add(new Vector2(x,y));
+                continue;
+            }
+            if (item =='(')
+            {
+                x= 0;
+                y= 0;
+                current = "";
+                continue;
+            }
+            if (item == ',')
+            {
+                x = float.Parse(current);
+                current = "";
+                continue;
+            }
+            current += item;
+        }
+
     }
     public void CraftCharts()
     {
@@ -44,8 +92,9 @@ public class CharManager : MonoBehaviour
     }
      void RunTest()
     {
-        songChart.beat = new List<List<Vector2>>();
-        songChart.beat.Add( new List<Vector2>());
+    List<string> prueba = new List<string>();
+    beat = new List<List<Vector2>>();
+        beat.Add( new List<Vector2>());
         int x = -180;
         for (int y = 0; y < 8; y++)
         {
@@ -53,9 +102,25 @@ public class CharManager : MonoBehaviour
         for (int i = -45; i < 45; i+=13)
         {
                 // x += 2;
-                songChart.beat[0].Add(new Vector2(i,x));
+                beat[0].Add(new Vector2(i,x));
         }
         }
+
+        ChartSerializable myObject = new ChartSerializable();
+        myObject.music = songChart.music;
+        myObject.songName = songChart.songName;
+        string pepita = "";
+        foreach (var item in beat[0])
+        {
+            pepita += item;
+        }
+            string pepe = pepita;
+            prueba.Add(pepe);
+        prueba.Add(pepe);
+
+        myObject.beat = prueba;
        
+        string json = JsonUtility.ToJson(myObject);
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/"+ songChart.songName+ ".json", json);
     }
 }
