@@ -43,7 +43,7 @@ public class ChartCreator : MonoBehaviour
     public TextAsset textFile;
      ChartSerializable serializable;
     public string route;
-    public float lastBeatTime;
+    float lastBeatTime;
     void Start()
     {
         beat = new List<List<Vector2>>();
