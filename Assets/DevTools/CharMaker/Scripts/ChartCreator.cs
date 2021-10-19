@@ -205,10 +205,10 @@ public class ChartCreator : MonoBehaviour
             listBtn[id].GetComponentInChildren<Hello>().transform.GetComponent<Image>().color = Color.black;
         }
     }
-    public void MakeLerp(float x)
+    public void MakeLerp()
     {
         audioS.Play();
-        StartCoroutine(SimpleLerp(x));
+        StartCoroutine(SimpleLerp(bpm));
     }
     IEnumerator SimpleLerp(float x)
     {
