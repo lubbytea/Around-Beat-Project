@@ -44,6 +44,7 @@ public class ChartCreator : MonoBehaviour
      ChartSerializable serializable;
     public string route;
     float lastBeatTime;
+    bool paused=true;
     void Start()
     {
         beat = new List<List<Vector2>>();
@@ -83,6 +84,7 @@ public class ChartCreator : MonoBehaviour
     }
     void Update()
     {
+   
         if (mouse.leftButton.wasReleasedThisFrame && inputs.ctrlKey.IsPressed())
         {
           GameObject g = (GameObject) Instantiate(point, mouse.position.ReadValue(), Quaternion.Euler(0, 0, 0), canvasChart);
@@ -192,21 +194,44 @@ public class ChartCreator : MonoBehaviour
     }
     void ChangeBeat(bool der)
     {
-        if (!der)
+        if (paused)
+        {
+            down = !down;
+            if (down)
+            {           
+                upS.SetActive(false);
+                downS.SetActive(true);
+            }
+            else
+            {
+                upS.SetActive(true);
+                downS.SetActive(false);
+            }
+            if (!der)
         {
             id++;
             listBtn[id - 1].GetComponentInChildren<Hello>().transform.GetComponent<Image>().color = Color.clear;
             listBtn[id].GetComponentInChildren<Hello>().transform.GetComponent<Image>().color = Color.black;
-        }
+                lastBeatTime += bpm;
+                audioS.time = lastBeatTime;
+            }
         else
         {
             id--;
             listBtn[id + 1].GetComponentInChildren<Hello>().transform.GetComponent<Image>().color = Color.clear;
             listBtn[id].GetComponentInChildren<Hello>().transform.GetComponent<Image>().color = Color.black;
+                lastBeatTime -= bpm;
+                if (lastBeatTime<0)
+                {
+                    lastBeatTime = 0;
+                }
+                audioS.time = lastBeatTime;
+            }
         }
     }
     public void MakeLerp()
     {
+        paused = false;
         audioS.Play();
         StartCoroutine(SimpleLerp(bpm));
     }
@@ -239,6 +264,7 @@ public class ChartCreator : MonoBehaviour
 
             audioS.Pause();
             audioS.time = lastBeatTime;
+            paused = true;
         }
         else
         {
