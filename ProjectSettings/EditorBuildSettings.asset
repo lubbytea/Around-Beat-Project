@@ -5,16 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Game/Scenes/Sample.unity
-    guid: 61504fc19b5372a4b86c227add656c1b
-  - enabled: 1
-    path: Assets/Game/Scenes/Menu2.unity
-    guid: 88792fa0949e3c343b975a4c37c2469e
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Game/Scenes/Menu.unity
+    guid: 5bb72c3f87b2aee408633fea1f165b29
+  - enabled: 0
     path: Assets/DevTools/CharMaker/CharEditor.unity
     guid: 074cdf6aa09b7724ebf392f6f029285f
+  - enabled: 1
+    path: Assets/Game/Scenes/Cancion.unity
+    guid: 88792fa0949e3c343b975a4c37c2469e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2484cdcc30d08014f8d34c1ecd57819a, type: 2}
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 19c2c10e861af4c4fa01d5f9e1a23b46, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a65206b48dfc7e145b8a55953a5e1c73, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 8ac7d05a8d445ff4cacffc3284d7f275, type: 2}

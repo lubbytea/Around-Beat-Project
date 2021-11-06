@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.0024357, y: 45.64999}
+  m_AnchoredPosition: {x: 0.0024357, y: 45.648136}
   m_SizeDelta: {x: -0.0024, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &21683033
@@ -7895,7 +7895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioS: {fileID: 874251956}
   pause: 0
-  bpm: 1
+  bpm: 3
   startMarker: {fileID: 1321396601}
   endMarker: {fileID: 1227883647}
   lime: {fileID: 355633209}
@@ -15781,8 +15781,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1852527136}
   m_HandleRect: {fileID: 1852527135}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.94067705
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -20555,5 +20555,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharMaker
       objectReference: {fileID: 0}
+    - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 4900000, guid: ad1f3648e1b9dbc4c929644e95fea038, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
