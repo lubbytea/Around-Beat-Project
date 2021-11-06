@@ -19,14 +19,15 @@ public class TriggerBar : MonoBehaviour
     {
         if (other.tag=="BEAT")
         {
-            other.GetComponent<Spheres>().ChangeMat(true);
+            other.gameObject.GetComponent<Spheres>().ChangeMat(true);
+            Debug.Log("asda");
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "BEAT")
         {
-            other.GetComponent<Spheres>().ChangeMat(false);
+            other.gameObject.GetComponent<Spheres>().ChangeMat(false);
         }
     }
 }

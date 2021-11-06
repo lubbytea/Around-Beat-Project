@@ -5,12 +5,11 @@ using UnityEngine;
 public class Spheres : MonoBehaviour
 {
     public GameObject hitFX;
-    public Material x1, x2;
-    public MeshRenderer me;
+    public GameObject pass,pass2;
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -22,11 +21,12 @@ public class Spheres : MonoBehaviour
     {
         if (yes)
         {
-            me.material = x1;
+            pass.SetActive(true);
         }
         else
         {
-            me.material = x2;
+            pass.SetActive(false);
+            pass2.SetActive(true);
         }
     }
     private void OnCollisionEnter(Collision other)
@@ -48,14 +48,6 @@ public class Spheres : MonoBehaviour
     //              }
     //}
 
-    void OnTriggerStay(Collider other)
-    {
-
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-
-    }
+ 
 
 }
