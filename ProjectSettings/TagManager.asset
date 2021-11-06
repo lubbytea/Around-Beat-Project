@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Chart
   - point
+  - BEAT
   layers:
   - Default
   - TransparentFX

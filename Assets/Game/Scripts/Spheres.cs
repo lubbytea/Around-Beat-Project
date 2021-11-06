@@ -5,6 +5,8 @@ using UnityEngine;
 public class Spheres : MonoBehaviour
 {
     public GameObject hitFX;
+    public Material x1, x2;
+    public MeshRenderer me;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,17 @@ public class Spheres : MonoBehaviour
     {
         
     }
-
+    public void ChangeMat(bool yes)
+    {
+        if (yes)
+        {
+            me.material = x1;
+        }
+        else
+        {
+            me.material = x2;
+        }
+    }
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log(other.gameObject.name);

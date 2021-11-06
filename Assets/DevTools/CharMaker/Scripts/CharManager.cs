@@ -17,8 +17,13 @@ public class CharManager : MonoBehaviour
     public ChartSerializable serializable;
     public List<List<Vector2>> beat;
     public TextAsset text;
-   
+    public Transform lime;
+    float n = 0;
     int i;
+    public float bpm;
+    public int maxValue;
+    bool down = false;
+    int id = 0;
     public void Start()
     {
         if (runTest)
@@ -28,10 +33,16 @@ public class CharManager : MonoBehaviour
         ReadChartString();
 
         StartCoroutine(CastMultiple());
+        MakeLerp();
+    }
+    private void Update()
+    {
+        lime.localPosition = new Vector3(lime.localPosition.x, n, lime.localPosition.z);
+
     }
     IEnumerator CastMultiple()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(bpm);
         values = beat[i];
         CraftCharts();
         i++;
@@ -99,10 +110,10 @@ public class CharManager : MonoBehaviour
         {
             if (Mathf.Abs(item.x) > anchor)
             {
-                spawner.localPosition = new Vector3(offCenterValue-((Mathf.Abs(item.x))*(Mathf.Abs(item.x)/ addedValueX) / addedValue), 0, 0);
+                spawner.localPosition = new Vector3(offCenterValue-((Mathf.Abs(item.y))*(Mathf.Abs(item.y)/ addedValueX) / addedValue), 0, 0);
             }
-            center.rotation = Quaternion.Euler(0, item.y, 0);
-            center.localPosition = new Vector3(0, item.x, 0);
+            center.rotation = Quaternion.Euler(0, item.x, 0);
+            center.localPosition = new Vector3(0, item.y, 0);
             Instantiate(chart, spawner.position, Quaternion.Euler(0, 0, 0));
         }
     }
@@ -147,4 +158,38 @@ public class CharManager : MonoBehaviour
         string json = JsonUtility.ToJson(myObject);
         System.IO.File.WriteAllText(Application.persistentDataPath + "/"+ songChart.songName+ ".json", json);
     }
+
+
+    // LERP
+    public void MakeLerp()
+    {
+        StartCoroutine(SimpleLerp(bpm));
+    }
+    IEnumerator SimpleLerp(float x)
+    {
+        int a, b;
+        if (down)
+        {
+            a = 0;
+            b = maxValue;
+      
+        }
+        else
+        {
+            a = maxValue;
+            b = 0;
+        }
+        for (float f = 0; f <= x; f += Time.deltaTime)
+        {
+            n = Mathf.Lerp(a, b, f / x);
+            yield return null;
+
+        }
+        n = b;
+      
+            down = !down;
+            id++;
+            StartCoroutine(SimpleLerp(x));
+     }
+    
 }

@@ -84,7 +84,6 @@ public class ChartCreator : MonoBehaviour
     }
     void Update()
     {
-   
         if (mouse.leftButton.wasReleasedThisFrame && inputs.ctrlKey.IsPressed())
         {
           GameObject g = (GameObject) Instantiate(point, mouse.position.ReadValue(), Quaternion.Euler(0, 0, 0), canvasChart);
