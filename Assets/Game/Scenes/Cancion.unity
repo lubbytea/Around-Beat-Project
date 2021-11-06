@@ -4043,6 +4043,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 4900000, guid: ad1f3648e1b9dbc4c929644e95fea038, type: 3}
+    - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: serializable.beat.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
 --- !u!1 &1975226714
