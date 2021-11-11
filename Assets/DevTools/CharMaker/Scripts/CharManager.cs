@@ -6,16 +6,16 @@ public class CharManager : MonoBehaviour
 {
     public Transform spawner;
     public Transform center;
-    public List<Vector2> values;
+    public List<Vector3> values;
     public float offCenterValue;
     public float addedValueX;
-    public GameObject chart;
+    public GameObject chart,chartB;
     public bool runTest;
     public float addedValue;
     public int anchor;
     public SongChart songChart;
     public ChartSerializable serializable;
-    public List<List<Vector2>> beat;
+    public List<List<Vector3>> beat;
     public TextAsset text;
     public Transform lime;
     float n = 0;
@@ -50,51 +50,62 @@ public class CharManager : MonoBehaviour
     }
     public void ReadChartString()
     {
-        beat = new List<List<Vector2>>();
+        beat = new List<List<Vector3>>();
          serializable = JsonUtility.FromJson<ChartSerializable>(text.text);
      
         foreach (var beater in serializable.beat)
         {
 
         char[] b = beater.ToCharArray();
-        float x=0f;
-        float y=0f;
-        string current="";
-        bool punto = false;
-         List<Vector2> tempList = new List<Vector2>();
+            float x = 0f;
+            float y = 0f;
+            float type = 0f;
+            string current = "";
+            bool punto = false;
+            bool tercer = false;
+            List<Vector3> tempList = new List<Vector3>();
         foreach (var item in b)
         {
-            if (item == '.')
-            {
-                punto = true;
-                continue;
+
+                if (item == '.')
+                {
+                    punto = true;
+                    continue;
+                }
+                if (punto == true)
+                {
+                    punto = false;
+                    continue;
+                }
+                if (item == ')')
+                {
+                    type = float.Parse(current);
+                    tempList.Add(new Vector3(x, y, type));
+                    continue;
+                }
+                if (item == '(')
+                {
+                    x = 0;
+                    y = 0;
+                    current = "";
+                    continue;
+                }
+                if (item == ',')
+                {
+                    if (tercer)
+                    {
+                        tercer = false;
+                        y = float.Parse(current);
+                        current = "";
+                        continue;
+                    }
+                    x = float.Parse(current);
+                    current = "";
+                    tercer = true;
+                    continue;
+                }
+                current += item;
             }
-            if (punto == true)
-            {
-                punto = false;
-                continue;
-            }
-            if (item == ')')
-            {
-                y = float.Parse(current);
-                tempList.Add(new Vector2(x,y));
-                continue;
-            }
-            if (item =='(')
-            {
-                x= 0;
-                y= 0;
-                current = "";
-                continue;
-            }
-            if (item == ',')
-            {
-                x = float.Parse(current);
-                current = "";
-                continue;
-            }
-            current += item;
-        }
             beat.Add(tempList);
         }
 
@@ -114,24 +125,31 @@ public class CharManager : MonoBehaviour
             }
             center.rotation = Quaternion.Euler(0, item.x, 0);
             center.localPosition = new Vector3(0, item.y, 0);
-            Instantiate(chart, spawner.position, Quaternion.Euler(0, 0, 0));
+            if (item.z==0)
+            {
+                Instantiate(chart, spawner.position, Quaternion.Euler(0, 0, 0));
+            }
+            else
+            {
+                Instantiate(chartB, spawner.position, Quaternion.Euler(0, 0, 0));
+            }
         }
     }
      void RunTest()
     {
     List<string> prueba = new List<string>();
-    beat = new List<List<Vector2>>();
+    beat = new List<List<Vector3>>();
 
 
         int x = -180;
         for (int y = 0; y < 8; y++)
         {
-          List<Vector2>  currentBeat = new List<Vector2>();
+          List<Vector3>  currentBeat = new List<Vector3>();
             x += 45;
         for (int i = -45; i < 45; i+=13)
         {
                 // x += 2;
-                currentBeat.Add(new Vector2(i,x));
+                currentBeat.Add(new Vector3(i,x));
         }
             beat.Add(currentBeat);
         }

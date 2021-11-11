@@ -1680,8 +1680,6 @@ MonoBehaviour:
   followObject: {fileID: 2816569142134228837}
   followSpeed: 30
   rotateSpeed: 100
-  followTarget: {fileID: 0}
-  body: {fileID: 0}
 --- !u!1 &3159028193317995448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,8 +1766,6 @@ MonoBehaviour:
   followObject: {fileID: 2816569142112534396}
   followSpeed: 30
   rotateSpeed: 100
-  followTarget: {fileID: 0}
-  body: {fileID: 0}
 --- !u!1 &3283928990040543887
 GameObject:
   m_ObjectHideFlags: 0

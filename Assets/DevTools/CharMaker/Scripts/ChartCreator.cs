@@ -26,7 +26,7 @@ public class ChartCreator : MonoBehaviour
     public Text songText;
 
     public SongChart songChart;
-    public GameObject point;
+    public GameObject point, pointB;
     public Transform canvasChart;
     float n = 0;
     public int maxValue;
@@ -36,7 +36,7 @@ public class ChartCreator : MonoBehaviour
     bool howFarWeGot;
     List<GameObject> listBtn;
     int id = 0;
-    public List<List<Vector2>> beat;
+    public List<List<Vector3>> beat;
     List<GameObject> notas;
     int currentIDForDelete=0;
     [Header("SONG HERE:")]
@@ -47,7 +47,7 @@ public class ChartCreator : MonoBehaviour
     bool paused=true;
     void Start()
     {
-        beat = new List<List<Vector2>>();
+        beat = new List<List<Vector3>>();
         notas = new List<GameObject>();
         listBtn = new List<GameObject>();
         songText.text = songChart.songName;
@@ -87,7 +87,15 @@ public class ChartCreator : MonoBehaviour
         if (mouse.leftButton.wasReleasedThisFrame && inputs.ctrlKey.IsPressed())
         {
           GameObject g = (GameObject) Instantiate(point, mouse.position.ReadValue(), Quaternion.Euler(0, 0, 0), canvasChart);
-            beat[id].Add(g.transform.localPosition);
+            beat[id].Add(new Vector3(g.transform.localPosition.x, g.transform.localPosition.y,0));
+            g.GetComponent<Hello>().id = currentIDForDelete;
+            currentIDForDelete++;
+            notas.Add(g);
+        }
+        if (mouse.leftButton.wasReleasedThisFrame && inputs.altKey.IsPressed())
+        {
+            GameObject g = (GameObject)Instantiate(pointB, mouse.position.ReadValue(), Quaternion.Euler(0, 0, 0), canvasChart);
+            beat[id].Add(new Vector3(g.transform.localPosition.x, g.transform.localPosition.y, 1));
             g.GetComponent<Hello>().id = currentIDForDelete;
             currentIDForDelete++;
             notas.Add(g);
@@ -161,7 +169,7 @@ public class ChartCreator : MonoBehaviour
         listBtn[0].GetComponentInChildren<Image>().transform.GetComponent<Image>().color = Color.black;
         for (int i = 0; i < cuatity; i++)
         {
-            List<Vector2> currentBeat = new List<Vector2>();
+            List<Vector3> currentBeat = new List<Vector3>();
             beat.Add(currentBeat);
         }
 
@@ -292,7 +300,16 @@ public class ChartCreator : MonoBehaviour
     {
         foreach (var item in beat[id])
         {
-          GameObject g = (GameObject)Instantiate(point, canvasChart.TransformPoint(new Vector2(item.x, item.y)) , Quaternion.Euler(0, 0, 0), canvasChart);
+            GameObject g;
+            if (item.z==0)
+            {
+                g = (GameObject)Instantiate(point, canvasChart.TransformPoint(new Vector2(item.x, item.y)), Quaternion.Euler(0, 0, 0), canvasChart);
+            }
+            else
+            {
+                g = (GameObject)Instantiate(pointB, canvasChart.TransformPoint(new Vector2(item.x, item.y)), Quaternion.Euler(0, 0, 0), canvasChart);
+            }
+         
             g.GetComponent<Hello>().id = currentIDForDelete;
             currentIDForDelete++;
             notas.Add(g);
@@ -301,7 +318,7 @@ public class ChartCreator : MonoBehaviour
     }
     public void ReadChartString()
     {
-        List<List<Vector2>> beatTemp = new List<List<Vector2>>();
+        List<List<Vector3>> beatTemp = new List<List<Vector3>>();
         serializable = JsonUtility.FromJson<ChartSerializable>(textFile.text);
 
         foreach (var beater in serializable.beat)
@@ -310,9 +327,11 @@ public class ChartCreator : MonoBehaviour
             char[] b = beater.ToCharArray();
             float x = 0f;
             float y = 0f;
+            float type = 0f;
             string current = "";
             bool punto = false;
-            List<Vector2> tempList = new List<Vector2>();
+            bool tercer = false;
+            List<Vector3> tempList = new List<Vector3>();
             foreach (var item in b)
             {
                 if (item == '.')
@@ -327,8 +346,8 @@ public class ChartCreator : MonoBehaviour
                 }
                 if (item == ')')
                 {
-                    y = float.Parse(current);
-                    tempList.Add(new Vector2(x, y));
+                    type = float.Parse(current);
+                    tempList.Add(new Vector3(x, y, type));
                     continue;
                 }
                 if (item == '(')
@@ -340,8 +359,16 @@ public class ChartCreator : MonoBehaviour
                 }
                 if (item == ',')
                 {
+                    if (tercer)
+                    {
+                        tercer = false;
+                        y = float.Parse(current);
+                        current = "";
+                        continue;
+                    }
                     x = float.Parse(current);
                     current = "";
+                    tercer = true;
                     continue;
                 }
                 current += item;

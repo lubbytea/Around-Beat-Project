@@ -238,6 +238,7 @@ MonoBehaviour:
   offCenterValue: 5
   addedValueX: 30
   chart: {fileID: 6895610991337895889, guid: 9b3625791c3aa12468c527ee93656e48, type: 3}
+  chartB: {fileID: 6895610991337895889, guid: 948fb57e4f9575a48b41daed7c4d4f65, type: 3}
   runTest: 0
   addedValue: 30
   anchor: 10

@@ -20,8 +20,8 @@ public class Hand : MonoBehaviour
     [SerializeField] public GameObject followObject;
     [SerializeField] public float followSpeed = 30f;
     [SerializeField] public float rotateSpeed = 100f;
-    public Transform followTarget;
-    public Rigidbody body;
+    private Transform followTarget;
+    private Rigidbody body;
 
     void Start()
     {
