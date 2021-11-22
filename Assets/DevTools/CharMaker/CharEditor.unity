@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.0024357, y: 45.649994}
+  m_AnchoredPosition: {x: 0.0024357, y: 44.530754}
   m_SizeDelta: {x: -0.0024, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &21683033
@@ -7905,7 +7905,7 @@ MonoBehaviour:
   currentChart: {fileID: 0}
   eventSystem: {fileID: 1134722802}
   songText: {fileID: 1820054403}
-  songChart: {fileID: 11400000, guid: c2de6e2a2cc1fcf4b9607cbecd2732c2, type: 2}
+  songChart: {fileID: 11400000, guid: 98e395ecb06274e4999914beabc2bb76, type: 2}
   point: {fileID: 4617380517444569725, guid: 69597c43826f7ba438e73a06638b9940, type: 3}
   pointB: {fileID: 4617380517444569725, guid: f287ae7b865f606478199eec70b5f9cb, type: 3}
   canvasChart: {fileID: 1133769917}
@@ -7915,8 +7915,8 @@ MonoBehaviour:
   father: {fileID: 21683031}
   btn1: {fileID: 1075924978110479697, guid: fd230872078e2584f869fb07dc5d1c23, type: 3}
   btn2: {fileID: 5501993275802934142, guid: 6ccf55317f1c2a449a5e09bb3f25a349, type: 3}
-  textFile: {fileID: 4900000, guid: ad1f3648e1b9dbc4c929644e95fea038, type: 3}
-  route: C:\GIT\Around-Beat-Project\Assets\Game\Songs\Charts
+  textFile: {fileID: 4900000, guid: 3d6d85ff4b37f794c8dfd17b1e1dec7c, type: 3}
+  route: C:\Users\Test\Documents\Unity GL\git\Around-Beat-Project\Assets\Game\Songs\Charts
 --- !u!1 &738569447
 GameObject:
   m_ObjectHideFlags: 0
@@ -8814,7 +8814,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2743b20c88dcb44449db84df8296315a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 972b1578b36fcba49992a0cab3cde6ff, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.103
   m_Pitch: 1
@@ -15786,7 +15786,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1852527135}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.50000024
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
