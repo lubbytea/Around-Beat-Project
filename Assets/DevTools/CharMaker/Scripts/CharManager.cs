@@ -23,7 +23,9 @@ public class CharManager : MonoBehaviour
     public float bpm;
     public int maxValue;
     bool down = false;
-    int id = 0;
+    public int id = 0;
+    public AudioSource cancion;
+    public float eutanacia;
     public void Start()
     {
         if (runTest)
@@ -32,20 +34,26 @@ public class CharManager : MonoBehaviour
         }
         ReadChartString();
 
-        StartCoroutine(CastMultiple());
-        MakeLerp();
+        StartCoroutine(waitForSong());
     }
     private void Update()
     {
         lime.localPosition = new Vector3(lime.localPosition.x, n, lime.localPosition.z);
-
+    }
+    IEnumerator waitForSong()
+    {
+        yield return new WaitForSeconds(2f);
+        cancion.Play();
+        yield return new WaitForSeconds(eutanacia);
+        StartCoroutine(CastMultiple());
+        MakeLerp();
     }
     IEnumerator CastMultiple()
     {
-        yield return new WaitForSeconds(bpm);
         values = beat[i];
         CraftCharts();
         i++;
+        yield return new WaitForSeconds(bpm);
         StartCoroutine(CastMultiple());
     }
     public void ReadChartString()

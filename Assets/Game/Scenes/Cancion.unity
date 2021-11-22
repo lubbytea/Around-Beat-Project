@@ -3579,7 +3579,7 @@ GameObject:
   - component: {fileID: 1493503471}
   - component: {fileID: 1493503470}
   m_Layer: 0
-  m_Name: kero-kero-bonito-id-rather-sleep
+  m_Name: Cancion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3595,8 +3595,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2743b20c88dcb44449db84df8296315a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 972b1578b36fcba49992a0cab3cde6ff, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4069,6 +4069,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2.5314538
       objectReference: {fileID: 0}
+    - target: {fileID: 577116762, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466678155374749896, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 466678155708872720, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4118,13 +4126,33 @@ PrefabInstance:
       value: CharMaker
       objectReference: {fileID: 0}
     - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: id
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
       propertyPath: bpm
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 4900000, guid: ad1f3648e1b9dbc4c929644e95fea038, type: 3}
+      objectReference: {fileID: 4900000, guid: 3d6d85ff4b37f794c8dfd17b1e1dec7c, type: 3}
+    - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: cancion
+      value: 
+      objectReference: {fileID: 1493503470}
+    - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: maxValue
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: eutanacia
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
+      propertyPath: songChart
+      value: 
+      objectReference: {fileID: 11400000, guid: 98e395ecb06274e4999914beabc2bb76, type: 2}
     - target: {fileID: 466678155708872723, guid: 593776382d4e20244b4e65b8a8f7a280, type: 3}
       propertyPath: serializable.beat.Array.size
       value: 0
