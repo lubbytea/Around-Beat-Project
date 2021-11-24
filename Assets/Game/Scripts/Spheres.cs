@@ -6,6 +6,7 @@ public class Spheres : MonoBehaviour
 {
     public GameObject hitFX;
     public GameObject pass,pass2;
+    public ParticleSystem xplotion;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,10 @@ public class Spheres : MonoBehaviour
         {
             //    Destroy(this.gameObject);
             Instantiate(hitFX, this.transform);
+        }
+        if (this.gameObject == pass2)
+        {
+            xplotion.Play(true);
         }
     }
 
