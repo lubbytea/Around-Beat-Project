@@ -37,10 +37,11 @@ public class Spheres : MonoBehaviour
         {
             //    Destroy(this.gameObject);
             Instantiate(hitFX, this.transform);
+            xplotion.Play(true);
         }
         if (this.gameObject == pass2)
         {
-            xplotion.Play(true);
+            
         }
     }
 
